@@ -20,6 +20,7 @@ module.exports = function(app) {
 					name : result[0].name, 
 					description : result[0].description,
 					amount : result[0].goal_amount,
+					due : result[0].goal_due,
 					token : result[0].token
 				});
 			});	
@@ -35,6 +36,7 @@ module.exports = function(app) {
 				name : req.body.name,
 				description : req.body.description,
 				goal_amount : req.body.amount,
+				goal_due : req.body.due,
 			})
 			.then(function(result){
 				app.db('project_addresses')

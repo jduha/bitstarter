@@ -7,7 +7,7 @@ var fs = require('fs');
 var contents = fs.readFileSync("./test/fixtures/projects.json");
 // Define to JSON type
 var seed_data = JSON.parse(contents);
-projects = seed_data.projects;
+var projects = seed_data.projects;
 
 function seed() {
 
@@ -16,7 +16,8 @@ function seed() {
 			.insert({
 				name: project.name,
 				description: project.description,
-				goal_amount: project.goal_amount
+				goal_amount: project.goal_amount,
+				goal_due: project.goal_due
 			}).then(function(result) {
 				db('project_addresses')
 					.insert({

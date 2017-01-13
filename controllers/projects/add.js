@@ -14,6 +14,7 @@ module.exports = function(app) {
 				name : req.body.name,
 				description : req.body.description,
 				goal_amount : req.body.amount,
+				goal_due : req.body.due
 			})
 			.then(function(result){
 				app.db('project_addresses')

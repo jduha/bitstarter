@@ -14,6 +14,7 @@ module.exports = function(app) {
 			'projects.name',
 			'projects.description',
 			'projects.goal_amount',
+			'projects.goal_due',
 			'project_addresses.token'
 		])
 		.from('projects')
